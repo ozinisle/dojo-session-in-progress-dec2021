@@ -1,0 +1,12 @@
+Download Dojo
+
+    https://download.dojotoolkit.org/release-1.16.4/dojo-release-1.16.4.zip
+
+
+Install a local Node JS Server
+
+    npm install http-server -g
+
+To Run Local Server
+
+    Run the command "http-server" from project root folder

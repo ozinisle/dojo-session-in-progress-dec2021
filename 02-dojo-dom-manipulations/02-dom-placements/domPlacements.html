@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dojo DOM CRUD Operations</title>
+
+    <!-- load Dojo --> 
+    <script src="../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./domPlacements.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li id="one">One</li>
+        <li id="two">Two</li>
+        <li id="three" style="color:red;font-weight:bold">Three</li>
+        <li id="four">Four</li>
+        <li id="five">Five</li>
+    </ul>
+    
+    <div>
+        <p>Place Three as first item</p>
+        <button id="moveFirst">The first item</button>
+
+        <p>Place Three before Two</p>
+        <button id="moveBeforeTwo">Before Two</button>
+        
+        <p>Place Three after Four</p>
+        <button id="moveAfterFour">After Four</button>
+        
+        <p>Place Three at the last element of the list</p>
+        <button id="moveLast">The last item</button>
+    </div>
+
+</body>
+</html>

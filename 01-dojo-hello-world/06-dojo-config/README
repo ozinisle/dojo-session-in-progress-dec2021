@@ -1,0 +1,2 @@
+
+1. Notice that dojoConfig is defined in a script block before dojo.js is loaded. This is of paramount importance—if reversed, the configuration properties will be ignored.
