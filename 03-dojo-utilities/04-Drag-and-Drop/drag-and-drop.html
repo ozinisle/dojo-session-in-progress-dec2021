@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Dojo Drag and Drop Example</title>
+
+    <!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript" src="./drag-and-drop.js"></script>
+    
+    <script type="text/javascript">
+        dojo.require("dojo.dnd.source");
+        dojo.require("dojo.parser"); 
+    </script>
+
+    <style type="text/css">
+        .dojoDndItem { padding:3px; }
+        .movableContainer { border: 1px solid #aaa; }
+        .movableContainer div { margin-left: 5em; }
+        .container1 { border-radius: 8pt 8pt 8pt 8pt; border:1px solid #aaa; padding: 1em 3em; cursor: pointer; }
+        .container2 {position:inherit;border-radius: 8pt 8pt 8pt 8pt; border:1px solid #aaa; padding: 1em 3em;cursor: pointer; }
+        #listNode { background: #ddd; }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Drag and Drop</h1>
+    <div dojoType="dojo.dnd.Source" id="listNode" class="container1">
+        <div dojoType="dojo.dnd.Source" class="dojoDndItem movableContainer">A container</div>
+        <div class="dojoDndItem">Item 1</div>
+        <div class="dojoDndItem">Item 2</div>
+        <div class="dojoDndItem">Item 3</div>
+    </div>
+    <br>
+    <div dojoType="dojo.dnd.Source" class="container1">
+    </div>
+
+</body>
+
+</html>
