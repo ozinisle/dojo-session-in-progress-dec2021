@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./popup-menu.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <div id="mainMenu" data-dojo-type="dijit/Menu">
+        <div id="edit" data-dojo-type="dijit/MenuItem">Edit</div>
+        <div id="view" data-dojo-type="dijit/MenuItem">View</div>
+        <div id="task" data-dojo-type="dijit/PopupMenuItem">
+            <span>Task</span>
+            <div id="taskMenu" data-dojo-type="dijit/Menu">
+                <div id="complete" data-dojo-type="dijit/MenuItem">
+                    Mark as Complete
+                </div>
+                <div id="cancel" data-dojo-type="dijit/MenuItem">
+                    Cancel
+                </div>
+                <div id="begin" data-dojo-type="dijit/MenuItem">
+                    Begin
+                </div>
+            </div>
+        </div><!-- end of sub-menu -->
+    </div>
+   
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+
+
+    require([
+        "dijit/Editor", 
+        "dojo/parser",
+        "dijit/_editor/plugins/ToggleDir",
+        "dijit/_editor/plugins/TextColor",
+        "dijit/_editor/plugins/FontChoice",
+        "dijit/_editor/plugins/LinkDialog",
+        "dijit/_editor/plugins/FullScreen",
+        "dijit/_editor/plugins/ViewSource",
+        "dijit/_editor/plugins/Print",
+        "dijit/_editor/plugins/NewPage",
+    
+        "dojox/editor/plugins/PrettyPrint",
+        "dojox/editor/plugins/PageBreak",
+        "dojox/editor/plugins/ShowBlockNodes",
+        "dojox/editor/plugins/Preview",
+        "dojox/editor/plugins/Save",
+        "dojox/editor/plugins/ToolbarLineBreak",
+        "dojox/editor/plugins/NormalizeIndentOutdent",
+        "dojox/editor/plugins/Breadcrumb",
+        "dojox/editor/plugins/FindReplace",
+        "dojox/editor/plugins/PasteFromWord",
+        "dojox/editor/plugins/InsertAnchor",
+        "dojox/editor/plugins/CollapsibleToolbar",
+        "dojox/editor/plugins/Blockquote",
+        "dojox/editor/plugins/Smiley",
+        "dojox/editor/plugins/UploadImage",
+    ]);

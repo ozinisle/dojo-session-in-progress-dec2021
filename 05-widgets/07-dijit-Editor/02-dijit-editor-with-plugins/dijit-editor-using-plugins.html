@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./dijit-editor-using-plugins.js"></script>
+      
+</head>
+<body class="claro">
+
+    <!-- 
+       
+        Short Name (add to extraPlugins list)	        Resource
+    -----------------------------------------------------------------------------
+    toggleDir	                                dijit/_editor/plugins/ToggleDir
+    foreColor, hiliteColor	                    dijit/_editor/plugins/TextColor
+    fontName, fontSize, formatBlock	            dijit/_editor/plugins/FontChoice
+    createLink, insertImage	                    dijit/_editor/plugins/LinkDialog
+    fullscreen	                                dijit/_editor/plugins/FullScreen
+    viewsource	                                dijit/_editor/plugins/ViewSource
+    print	                                    dijit/_editor/plugins/Print
+    newpage	                                    dijit/_editor/plugins/NewPage 
+    
+    -->
+    
+    <h1> Dijit Editor with first set of Plugins</h1>
+
+    <!-- Note | will act as a separator in the tool bar in the UI-->
+    <div data-dojo-type="dijit/Editor" 
+        data-dojo-props="extraPlugins:['foreColor','hiliteColor','|',
+            'createLink','insertImage','fullscreen','viewsource','newpage','|',
+            'toggleDir']">
+        This is the <strong>default</strong> content.
+    </div>
+
+    <!--
+        Short Name (add to extraPlugins list)	    Resource
+        ---------------------------------------------------------------------------------
+        prettyprint	                            dojox/editor/plugins/PrettyPrint
+        pagebreak	                            dojox/editor/plugins/PageBreak
+        showblocknodes	                        dojox/editor/plugins/ShowBlockNodes
+        preview	                                dojox/editor/plugins/Preview
+        save	                                dojox/editor/plugins/Save
+        || or toolbarlinebreak	                dojox/editor/plugins/ToolbarLineBreak
+        normalizeindentoutdent	                dojox/editor/plugins/NormalizeIndentOutdent
+        breadcrumb	                            dojox/editor/plugins/Breadcrumb
+        findreplace	                            dojox/editor/plugins/FindReplace
+        pastefromword	                        dojox/editor/plugins/PasteFromWord
+        insertanchor	                        dojox/editor/plugins/InsertAnchor
+        collapsibletoolbar	                    dojox/editor/plugins/CollapsibleToolbar
+        blockquote	                            dojox/editor/plugins/Blockquote
+        smiley	                                dojox/editor/plugins/Smiley
+        uploadImage	                            dojox/editor/plugins/UploadImage
+    -->
+
+    <h1> Dijit Editor with first set of Plugins</h1>
+
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/PageBreak.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/ShowBlockNodes.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/Preview.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/Save.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/Breadcrumb.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/FindReplace.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/PasteFromWord.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/InsertAnchor.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/CollapsibleToolbar.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/Blockquote.css" />
+    <link rel="stylesheet" href="../../../lib/dojo/dojox/editor/plugins/resources/css/Smiley.css" />
+
+    <!-- Note :: 'toolbarlinebreak' will actually introduce a new line in the tool bar of the Dijit editor-->
+
+    <div data-dojo-type="dijit/Editor" 
+        data-dojo-props="extraPlugins:[
+            'prettyprint',
+            'pagebreak',
+            'showblocknodes',
+            'preview',  
+            'save',
+
+            'toolbarlinebreak',
+
+            'normalizeindentoutdent',
+            'breadcrumb',
+            'findreplace',
+            'pastefromword',
+                                    '|',
+            'insertanchor',
+            'collapsibletoolbar',
+            'blockquote',
+            'smiley',
+            'uploadImage',
+        ]">
+        This is the <strong>default</strong> content.
+    </div>
+</body>
+</html>
+

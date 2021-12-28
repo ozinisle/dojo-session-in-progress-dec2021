@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./dijit-editor.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <h1><u>Declarative Dijit Editor</u></h1>
+    <h1> Dijit Editor with all default tools enabled</h1>
+    <!-- declaratively create an Editor instance -->
+    <div data-dojo-type="dijit/Editor"></div>
+    </div>
+
+
+    <h1> Dijit Editor enabled with selective tools</h1>
+    <!-- While the Editor displays numerous tools by default, it's very easy to choose which tools you'd 
+        like displaying and which you'd prefer not be available -->
+    <div data-dojo-type="dijit/Editor"
+    data-dojo-props="plugins:['bold','italic','|','cut','copy','paste','|','insertUnorderedList']"></div>
+
+
+    <h1><u>Programatic Dijit Editor</u></h1>
+    <!-- Programatic Dijit Editor-->
+    <div style="width:700px;min-height:100px;" id="myEditor"></div>
+
+</body>
+</html>
+

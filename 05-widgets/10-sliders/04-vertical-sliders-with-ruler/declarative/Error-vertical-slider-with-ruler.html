@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    
+      
+</head>
+<body class="claro">
+    
+    <!-- create rules and labels above vertical slider -->
+    <ol data-dojo-type="dijit/form/VerticalRuleLabels"
+        data-dojo-props="
+            container: 'topDecoration',
+            count: 11,
+            numericMargin: 1"
+        style="height: 1.2em; font-weight: bold">
+    </ol>
+    <div data-dojo-type="dijit/form/VerticalRule"
+        data-dojo-props="
+            container: 'topDecoration',
+            count: 11"
+        style="height: 5px; margin: 0 12px;"></div>
+
+    <!-- declaratively create a slider without buttons, values from 0-10 -->
+    <input id="hslider" type="range" value="3"
+        data-dojo-type="dijit/form/VerticalSlider"
+        data-dojo-props="
+            minimum: 0,
+            maximum: 10,
+            showButtons: false,
+            discreteValues: 11" style="height:300px">
+
+    <!-- create rules and labels below vertical slider -->
+    <div data-dojo-type="dijit/form/VerticalRule"
+        data-dojo-props="
+            container: 'bottomDecoration',
+            count: 5"
+            style="height: 5px; margin: 0 12px;"></div>
+            
+    <ol data-dojo-type="dijit/form/VerticalRuleLabels"
+        data-dojo-props="
+            container: 'bottomDecoration'"
+        style="height: 1em; font-weight: bold;">
+        <li>lowest</li>
+        <li>normal</li>
+        <li>highest</li>
+    </ol>
+
+    <script>
+        require(["dijit/form/VerticalSlider", "dijit/form/VerticalRuleLabels", "dijit/form/VerticalRule", "dojo/parser"]);
+    </script>
+   
+
+</body>
+</html>
+

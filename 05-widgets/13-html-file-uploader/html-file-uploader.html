@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./html-file-uploader.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <form method="post" action="/tests/UploadFile.php" id="myForm"
+    enctype="multipart/form-data">
+        <fieldset>
+            <legend>Form Post Test</legend>
+            <input class="browseButton" name="uploadedfile" multiple="true"
+                type="file" data-dojo-type="dojox/form/Uploader"
+                data-dojo-props="label: 'Select Some Files'" id="uploader">
+            <input type="text" name="album" value="Summer Vacation">
+            <input type="text" name="year" value="2011">
+            <input type="submit" label="Submit" data-dojo-type="dijit/form/Button">
+            <div id="files" data-dojo-type="dojox/form/uploader/FileList"
+            data-dojo-props="uploaderId: 'uploader'"></div>
+        </fieldset>
+    </form>
+   
+
+</body>
+</html>
+

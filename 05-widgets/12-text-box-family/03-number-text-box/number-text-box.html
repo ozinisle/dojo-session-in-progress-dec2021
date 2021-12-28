@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/JavaScript" src="./number-text-box.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <br><br>
+
+    <!-- Part 1 Declarative NumberTextBox-->
+    <label for="q05">Integer between -20000 to +20000:</label>
+    <input id="q05" type="text"
+    data-dojo-type="dijit/form/NumberTextBox"
+    name= "elevation"
+    required="true"
+    value="3000"
+    data-dojo-props="constraints:{min:-20000,max:20000,places:0},
+    invalidMessage:'Please enter a numeric value.',
+    rangeMessage:'Invalid elevation.'" />
+
+    <br><br>
+
+    <!-- Part 2 Programatic NumberTextBox-->
+    <label for="programmatic">Input any number with up to 6 fractional digits:</label>
+    <input id="programmatic" type="text" />
+
+    <br><br>
+
+    <!-- Part 3 Formatting-->
+    <label for="zeroPadded">Fractional value:</label>
+    <input id="zeroPadded" type="text"
+        data-dojo-type="dijit/form/NumberTextBox"
+        name= "decimal"
+        value="+123.342"
+        constraints="{pattern: '+0.000;-0.000'}"
+        required="true" /><br>
+    <button>dummy button (tab to here)</button>
+
+</body>
+</html>
+

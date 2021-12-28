@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./tooltip.js"></script>
+	
+	<style>
+		.margin-align {
+			position:absolute;
+			top:100px;
+			left:300px;
+		}
+
+		.custom-class {
+			color:red !important;
+			font-weight:bold !important;
+		}
+	</style>
+</head>
+<body class="claro">
+    <div class="margin-align">
+		<!--Tooltip.defaultPosition = ["above", "below", "after-centered", "before-centered"];-->
+    
+		<br><br>
+		<button id="TooltipButton1">Tooltip Above</button>
+		
+		<br><br><br><br>
+		<button id="TooltipButton2">Tooltip Below</button>
+		
+		<br><br><br><br>
+		<button id="TooltipButton3">Tooltip Before</button>
+		
+		<br><br><br><br>
+		<button id="TooltipButton4">Tooltip After</button>
+
+		<br><br><br><br>
+		<button id="TooltipButton5">Tooltip Default Position - Set Programatically</button>
+
+		<br><br><br><br>
+		<button id="adhocToolTip">Ad-Hoc Popup</button>
+		
+		
+		
+	</div>
+
+	<table id="myTable">
+		<tr tooltipText="tooltip for row 1"><td>row 1</td></tr>
+		<tr tooltipText="tooltip for row 2"><td>row 2</td></tr>
+		<tr tooltipText="tooltip for row 3"><td>row 3</td></tr>
+   </table>
+
+</body>
+</html>

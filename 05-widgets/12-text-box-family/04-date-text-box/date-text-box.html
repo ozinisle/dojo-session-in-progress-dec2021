@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/JavaScript" src="./date-text-box.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <br><br>
+
+    <!-- Part 1 Declarative DateTextBox-->
+    <label for="date1">Drop down Date box:</label>
+    <input type="text" name="date1" id="date1" value="2005-12-30"
+    data-dojo-type="dijit/form/DateTextBox"
+    required="true" />
+
+    <br><br>
+
+    <!-- Part 2  :: IMPORTANT :: NOTE 
+        EXAMPLE OF EXTENDING A WIDGET
+    -->
+
+    <label for="fromServerValue">Oracle date coming from server:</label>
+    <input id="fromServerValue" readonly="readonly" disabled="disabled" value="31-DEC-2009" /><br /><br />
+    <label for="oracle">Client date:</label>
+    <input id="oracle" /><br/><br />
+    <label for="toServerValue">Oracle date going back to server:</label>
+    <input id="toServerValue" readonly="readonly" disabled="disabled" />
+
+    <br><br>
+
+    <!-- Part 3 :: Changing Constraints on the fly-->
+    <label for="fromDate">From:</label>
+    <input data-dojo-id="myFromDate" type="text" name="fromDate" data-dojo-type="dijit/form/DateTextBox" required="true"
+        onChange="myToDate.constraints.min = arguments[0];" /><br><br>
+    <label for="toDate">To:</label>
+    <input data-dojo-id="myToDate" type="text" name="toDate" data-dojo-type="dijit/form/DateTextBox" required="true"
+        onChange="myFromDate.constraints.max = arguments[0];" /><br><br>
+
+    <!-- Part 4 :: Working with Two-Digit Years-->
+    <label for="myShortYear">From:</label>
+    <input data-dojo-id="myShortYear" type="text" name="shortYear" id="myShortYear" data-dojo-type="dijit/form/DateTextBox" 
+        data-dojo-props="constraints:{fullYear: false}" value="1999-12-31" required="true" />
+    
+
+</body>
+</html>
+

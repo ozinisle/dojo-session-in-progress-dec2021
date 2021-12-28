@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./terms-and-conditions-dialog.js"></script>
+
+    <style>
+        .dialog-terms {
+            height:160px;
+            overflow-y:scroll;
+            border:1px solid #769dc4;
+            padding:0 10px;
+            width:600px
+        }
+        
+    </style>
+       
+</head>
+<body class="claro">
+
+    <!-- Declarative case -->
+    <button id="showDialog" >View Terms and Conditions - Declarative</button> <br><br>
+
+    <!-- Imperative case -->
+    <button id="showImperativeDialog" >View Terms and Conditions - Imperative</button> <br><br>
+
+    <!-- code this after illustrating the above two cases-->
+    <div id="progbutton"></div>
+
+    <div class="dijitHidden">
+        <div id="terms"
+            data-dojo-type="dijit/Dialog" 
+            style="width:600px;" 
+            data-dojo-props="title:'Terms and Conditions'" >
+            <p><strong>Please agree to the following terms and conditions:</strong></p>
+            <div class="dialog-terms">
+                <p>
+                    statements ...<br>
+                    more statement ...<br>
+                </p>
+            </div>
+
+            <button id="hideDialog">I Agree</button>
+            <button onclick="alert('You must agree!');">I Don't Agree</button>
+        </div>
+        <div>
+            <div style="width:600px;" id="termsImperative">
+                <p><strong>Please agree to the following terms and conditions:</strong></p>
+                <div class="dialog-terms">
+                    <p>
+                        statements ...<br>
+                        more statement ...<br>
+                    </p>
+                </div>
+
+                <button id="hideImperativeDialog" class="hideImperativeDialog">I Agree</button>
+                <button onclick="alert('You must agree!');">I Don't Agree</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

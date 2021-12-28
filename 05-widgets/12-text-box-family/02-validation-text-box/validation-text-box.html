@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/JavaScript" src="./validation-text-box.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <!-- Validation text box -->
+    <label for="phone">Phone number, no spaces:</label>
+    <input type="text" name="phone" id="phone" value="someTestString" required="true"
+    data-dojo-type="dijit/form/ValidationTextBox"
+    data-dojo-props="regExp:'[\\w]+', invalidMessage:'Invalid Non-Space Text.'" />
+
+    <br><br>
+
+    <!-- Validation using regular expressions -->
+    <label for="zip"> 6-Digit Indian Zipcode only:</label>
+    <input type="text" name="zip" value="00000" required="true"
+    data-dojo-type="dijit/form/ValidationTextBox"
+    data-dojo-props="regExp:'\\d{6}', invalidMessage:'Invalid zip code.'" />
+
+    <br><br>
+    
+    <!-- Generate Reqular Expressions-->
+    <label for="zip2"> 5-Digit U.S. Zipcode only:</label>
+    <input type="text" name="zip" value="00000" id="zip2" required="true"
+    data-dojo-type="dijit/form/ValidationTextBox"
+    data-dojo-props="regExpGen:after5, invalidMessage:'Zip codes before 5PM, county name after 5 PM.'" />
+    
+    
+   
+
+</body>
+</html>
+

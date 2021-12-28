@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Ajax</title>
+
+    <!-- load Dojo --> 
+    <link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<script>dojoConfig = {parseOnLoad: true}</script>
+
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./check-boxes.js"></script>
+
+    
+</head>
+<body class="claro">
+
+    <br><br>
+        Please make changes on the page and  watch console for outputs
+    <br><br>
+
+    <input id="mycheck1" name="checkBoxGroup" data-dojo-type="dijit/form/CheckBox" value="Modern" checked 
+        onChange="console.log('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + this.get('value'))" /> 
+    <label for="mycheck"> Modern </label>
+
+    <input id="mycheck2" name="checkBoxGroup" data-dojo-type="dijit/form/CheckBox" value="Authentic"  
+        onChange="console.log('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + this.get('value'))" />
+     <label for="mycheck"> Authentic </label>
+    
+</body>
+</html>

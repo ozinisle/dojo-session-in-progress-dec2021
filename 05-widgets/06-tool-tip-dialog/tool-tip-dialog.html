@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./tool-tip-dialog.js"></script>
+      
+</head>
+<body class="claro">
+
+    <div data-dojo-type="dijit/form/DropDownButton">
+        <span>Login</span><!-- Text for the button -->
+        <!-- The dialog portion -->
+        <div data-dojo-type="dijit/TooltipDialog" id="ttDialog">
+            <strong><label for="email" style="display:inline-block;width:100px;">Email:</label></strong>
+            <div data-dojo-type="dijit/form/TextBox" id="email"></div>
+            <br />
+            <strong><label for="pass" style="display:inline-block;width:100px;">Password:</label></strong>
+            <div data-dojo-type="dijit/form/TextBox" id="pass"></div>
+            <br />
+            <button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:doAlert()" type="submit">Submit</button>
+        </div>
+    </div>
+
+</body>
+</html>
+

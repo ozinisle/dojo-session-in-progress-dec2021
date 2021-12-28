@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<script>dojoConfig = {parseOnLoad: true}</script>
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    
+	
+	<style>
+		.margin-align {
+			position:absolute;
+			top:100px;
+			left:300px;
+		}
+	</style>
+</head>
+<body class="claro">
+
+	<div class="margin-align">
+		<!--Tooltip.defaultPosition = ["above", "below", "after-centered", "before-centered"];-->
+    
+		<br><br>
+		<button id="TooltipButton" onmouseover="dijit.Tooltip.defaultPosition=['above', 'below']">Tooltip Above</button>
+		<div class="dijitHidden"><span data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'TooltipButton'">I am <strong>above</strong> the button</span></div>
+		
+		<br><br><br><br>
+		<button id="TooltipButton2" onmouseover="dijit.Tooltip.defaultPosition=['below','above']">Tooltip Below</button>
+		<div class="dijitHidden"><span data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'TooltipButton2'">I am <strong>below</strong> the button</span></div>
+
+		<br><br><br><br>
+		<button id="TooltipButton3" onmouseover="dijit.Tooltip.defaultPosition=['after','before']">Tooltip After</button>
+		<div class="dijitHidden"><span data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'TooltipButton3'">I am <strong>after</strong> the button</span></div>
+
+		<br><br><br><br>
+		<button id="TooltipButton4" onmouseover="dijit.Tooltip.defaultPosition=['before','after']">Tooltip Before</button>
+		<div class="dijitHidden"><span data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'TooltipButton4'">I am <strong>before</strong> the button</span></div>
+	
+		
+	</div>
+
+</body>
+</html>

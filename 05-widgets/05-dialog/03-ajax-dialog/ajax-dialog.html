@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./ajax-dialog.js"></script>
+
+    
+       
+</head>
+<body class="claro">
+    <button onclick="showDialog();">Load Ajax Dialog</button>
+
+<div class="dijitHidden">
+    <!-- dialog that gets its content via ajax, uses loading message -->
+    <div 
+        id="ajaxDialog"
+        data-dojo-type="dijit/Dialog" 
+        style="width:600px;" 
+        data-dojo-props="title:'Ajax Dialog',
+                        href:'http://localhost:3000/',
+                        loadingMessage:'Loading dialog content...'" 
+    ></div>
+</div>
+
+</body>
+</html>
+

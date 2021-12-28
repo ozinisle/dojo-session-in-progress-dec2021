@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<script>dojoConfig = {parseOnLoad: true}</script>
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+
+    <style>
+        .context-list {
+            position:absolute;
+            top:100px;
+            left: 50px;
+        }
+        .context-list li {
+            padding:20px;
+        }
+    </style>
+    
+</head>
+<body class="claro">
+
+	<ul class="context-list">
+        <li><a href="http://www.imdb.com/title/tt0112573/" id="movieBraveheart">Braveheart</a></li>
+        <li><a href="http://www.imdb.com/title/tt0237534/" id="movieBrotherhood">Brotherhood of the Wolf</a></li>
+        <li><a href="http://www.imdb.com/title/tt0245844/" id="movieCristo">The Count of Monte Cristo</a></li>
+    </ul>
+
+    <div class="dijitHidden">
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'movieBraveheart'">
+            <img style="width:100px; height:133px; display:block; float:left; margin-right:10px;" src="https://dojotoolkit.org/documentation/tutorials/1.10/dialogs_tooltips/images/tip.png" />
+            <p style="width:400px;"><strong>Braveheart</strong><br />Braveheart is the partly historical, partly mythological, story of William Wallace, a Scottish common man who fights for his country's freedom from English rule around the end of the 13th century...</p>
+            <br style="clear:both;">
+        </div>
+    </div>
+    <div class="dijitHidden">
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'movieBrotherhood'">
+            <img style="width:100px; height:133px; display:block; float:left; margin-right:10px;" src="https://dojotoolkit.org/documentation/tutorials/1.10/dialogs_tooltips/images/brotherhood.jpg" />
+            <p style="width:400px;"><strong>Brotherhood of the Wolf</strong><br />In 1765 something was stalking the mountains of central France. A 'beast' that pounced on humans and animals with terrible ferocity...</p>
+            <br style="clear:both;">
+        </div>
+    </div>
+    <div class="dijitHidden">
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'movieCristo'">
+            <img style="width:100px; height:133px; display:block; float:left; margin-right:10px;" src="https://dojotoolkit.org/documentation/tutorials/1.10/dialogs_tooltips/images/count.jpg" />
+            <p style="width:400px;"><strong>The Count of Monte Cristo</strong><br />'The Count of Monte Cristo' is a remake of the Alexander Dumas tale by the same name. Dantes, a sailor who is falsely accused of treason by his best friend Fernand, who wants Dantes' girlfriend Mercedes for himself...</p>
+            <br style="clear:both;">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./text-box.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <!--Part 1 Creating a Textbox widget programatically-->
+    <input id="firstname" />
+    <br><br>
+
+    <!--Part 2 Getting Handle to the Declarative widget programatically-->
+    <label for="value0Box">A textbox with a value:</label> 
+    <input id="value0Box" data-dojo-type="dijit/form/TextBox" value="Some value" 
+        data-dojo-props="intermediateChanges:true"></input>
+        <br><br>
+    <label for="value1Box">A textbox set with a value from the above textbox:</label> 
+    <input id="value1Box" data-dojo-type="dijit/form/TextBox"></input>
+    <br>
+
+</body>
+</html>
+

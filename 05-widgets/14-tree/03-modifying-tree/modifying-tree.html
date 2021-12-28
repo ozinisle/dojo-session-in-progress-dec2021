@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+    <title>Modifying tree</title>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    
+    <script src="../data/tree-store-data.js"></script>
+    <script src="./modifying-tree.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <div id="tree"></div>
+   <!-- Updating a tree -->
+   <br><br>
+   <button id="addItem">Add Item</button>
+   <button id="removeItem">Remove Item</button>
+   
+   <div id="status"></div>
+
+</body>
+</html>
+

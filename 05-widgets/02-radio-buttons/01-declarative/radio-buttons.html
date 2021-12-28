@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+	
+	<script>dojoConfig = {parseOnLoad: true}</script>
+	<!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./radio-buttons.js"></script>
+	
+	<script>
+
+	</script>
+</head>
+<body class="claro">
+    <form id="myform">
+        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioOne" value="tea"/> 
+        <label for="radioOne">Tea</label> 
+        
+        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioTwo" value="coffee"/> 
+        <label for="radioTwo">Coffee</label> <br /> 
+
+        <button data-dojo-type="dijit/form/Button" type="button" id="submitButton">
+            Show form submit value
+        </button>
+    </form>
+</body>
+</html>

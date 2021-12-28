@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./drop-down-button.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <select id="stateSelect" name="stateSelect" data-dojo-type="dijit/form/FilteringSelect"
+    data-dojo-props="
+            value: '',
+            placeHolder: 'Select a State'">
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+    </select>
+    <script>
+        require(["dijit/form/FilteringSelect", "dojo/parser"]);
+    </script>
+   
+
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    <script src="./drop-down-button.js"></script>
+      
+</head>
+<body class="claro">
+    
+    <button id="toggle" data-dojo-type="dijit/form/ToggleButton"
+        data-dojo-props="iconClass: 'dijitCheckBoxIcon', checked: true">
+        Toggle
+    </button>
+
+    <div id="combo" data-dojo-type="dijit/form/ComboButton"
+        data-dojo-props="
+            optionsTitle: 'Save Options',
+            iconClass: 'dijitIconFile',
+            onClick: function(){ console.log('Clicked ComboButton'); }">
+        <span>Combo</span>
+        <div id="saveMenu" data-dojo-type="dijit/Menu">
+            <div data-dojo-type="dijit/MenuItem"
+                data-dojo-props="
+                    iconClass: 'dijitEditorIcon dijitEditorIconSave',
+                    onClick: function(){ console.log('Save'); }">
+                Save
+            </div>
+            <div data-dojo-type="dijit/MenuItem"
+                data-dojo-props="onClick: function(){ console.log('Save As'); }">
+                Save As
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDown" data-dojo-type="dijit/form/DropDownButton"
+        data-dojo-props="iconClass: 'dijitIconApplication'">
+        <span>DropDown</span>
+        <div data-dojo-type="dijit/TooltipDialog">
+            This is a TooltipDialog. You could even put a form in here!
+        </div>
+    </div>
+
+    <script>
+        // load requirements for declarative widgets in page content
+        require(["dijit/form/ToggleButton", "dijit/form/ComboButton", "dijit/Menu", "dijit/MenuItem", "dijit/form/DropDownButton", "dijit/TooltipDialog", "dojo/parser"]);
+    </script>
+
+</body>
+</html>
+

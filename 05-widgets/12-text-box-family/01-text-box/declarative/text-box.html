@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+
+	<link rel="stylesheet" href="../../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- configure Dojo -->
+    <script>
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true
+        };
+    </script>
+	
+	<!-- load Dojo --> 
+    <script src="../../../../lib/dojo/dojo/dojo.js"></script>
+    
+      
+</head>
+<body class="claro">
+    
+    <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
+    <input type="text" name="firstname" value="testing testing"
+        data-dojo-type="dijit/form/TextBox"
+        data-dojo-props="trim:true, propercase:true" id="firstname" />
+
+    <!-- Part 2-->
+    <br><br>
+    <label for="dtb">A default textbox:</label> <input id="dtb" data-dojo-type="dijit/form/TextBox" />
+    <br>
+    <label for="ltb">A large textbox:</label> <input id="ltb" style="width: 50em;" data-dojo-type="dijit/form/TextBox" />
+    <br>
+    <label for="stb">A small textbox:</label> <input id="stb" style="width: 10em;" data-dojo-type="dijit/form/TextBox" />
+
+    <script>
+        // load requirements for declarative widgets in page content
+        require(["dojo/parser", "dijit/form/TextBox"]);
+    </script>
+   
+
+</body>
+</html>
+
