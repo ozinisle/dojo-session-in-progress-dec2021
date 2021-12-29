@@ -1,0 +1,13 @@
+
+/* Phase 4 */
+
+.businessCard {
+    border: 3px inset gray;
+    margin: 1em;
+}
+.employeeName {
+    color: blue;
+}
+.specialEmployeeName {
+    color: red;
+}

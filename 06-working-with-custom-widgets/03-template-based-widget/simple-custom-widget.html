@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple Template Based Widget</title>
+
+    <script type="text/javascript">
+        var dojoConfig = (function(){
+            var base = location.href.split("/");
+            base.pop();
+            base.pop();
+            base = base.join("/");
+            return {
+                async: true,
+                isDebug: true,
+                packages: [{
+                    name: "app",
+                    location: base + "/app/widget"
+                }]
+            };
+        })();
+    </script>
+
+    <!-- load Dojo --> 
+    <script src="../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./simple-custom-widget.js"></script>
+</head>
+<body>
+
+    <h1> Simple Template Widget</h1>
+    <div id="simpleTemplateWidgetContainer">
+</body>
+</html>

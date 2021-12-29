@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Custom Widget</title>
+
+     <!-- load Dojo --> 
+     <link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+
+    <!-- load Dojo --> 
+    <script src="../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./dijit-widget-base.js"></script>
+    
+</head>
+<body>
+    
+    <Span> Phase 1:</Span><br>
+    <div class="phase1">
+        A Custom Widget will be  created and placed below <br><br>
+
+        <span data-dojo-type="MyFirstBehavioralWidget">Will be replaced with widget</span>
+    
+    </div>
+    
+    <br>
+
+    <Span> Phase 2:</Span><br>
+    <div class="phase2">
+        <span data-dojo-type="Counter"></span>
+    </div>
+    
+    <br>
+
+    <Span> Phase 3:</Span><br>
+    <div class="phase3">
+        <span data-dojo-type="FancyCounter">press me</span>
+    </div>
+
+        
+    <br>
+
+    <Span> Phase 4:</Span><br>
+    <div class="phase4">
+        <span data-dojo-type="BusinessCard" data-dojo-props="name:'John Smith', phone:'(800) 555-1212'"></span>
+        <span data-dojo-type="BusinessCard" data-dojo-props="name:'Jack Bauer', nameClass:'specialEmployeeName', phone:'(800) CALL-CTU'"></span>
+    </div>
+    
+    <br>
+
+    <Span> Phase 5:</Span><br>
+    <div class="phase5">
+        <span data-dojo-type="HidePane" data-dojo-props="open:false" data-dojo-id="pane">This pane is initially hidden</span> 
+        <button onclick="pane.set('open', true);">show</button>
+        <button onclick="pane.set('open', false);">hide</button>
+    </div>
+
+    <br>
+
+    <Span> Phase 6:</Span><br>
+    <div class="phase5">
+        Please watch the console for outputs
+    </div>
+    
+    <br>
+
+    <span> Phase 7:</span><br>
+    <div class="phase 6">
+        <button data-dojo-type="MyButton">Extended Button Widget</button>
+    </div>
+
+    <br>
+
+    <span> Phase 8:</span> <br>
+    <div class="phase 8" >
+        Please watch the console for outputs<br><br>
+        <div id="LifeCycleWidget_container">
+
+        </div>
+    </div>
+
+    <br>
+    
+    <span> Phase 9:  "Watch command" </span> <br>
+    <div class="phase 8" >
+        Please watch the console for outputs<br><br>
+        
+    </div>
+
+    <!-- <br>
+    <span> Phase 9:</span> <br>
+    <div class="phase 9" >
+        Please watch the console for outputs<br>
+        <div id="PrivateScopedVariables_container">
+
+        </div>
+    </div> -->
+    
+</body>
+</html>

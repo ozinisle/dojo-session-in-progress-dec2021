@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Deferred</title>
+
+    <!-- load Dojo --> 
+    <script src="../../lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="./dojo-deferred.js"></script>
+</head>
+<body>
+    <br><br>
+    <!-- Please watch Console for output statements -->
+
+    User List<br><br>
+    <ul id="userlist">
+
+    </ul>
+    <br><br>
+
+    <button id="deferred_success_scenario">Deferred Success Scenario</button> <br><br>
+    <div> You should see a list getting appended with 3 items</div><br><br>
+
+    <button id="deferred_error_scenario">Deferred Error Scenario</button><br><br>
+    <div> You should see the list getting appened with a fourth item which is an error message</div><br><br>
+
+    <button id="deferred_reused_scenario">Deferred Reused Scenario</button> <br><br>
+    <div> Note: you wont see any out put as the deferred will not give output if reused<br><br>
+    Evidently Neither the Success Scenario button nor the Error Scenario button will seem to work the second time
+    </div>
+
+    
+    
+</body>
+</html>
