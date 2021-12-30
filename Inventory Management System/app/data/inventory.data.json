@@ -1,0 +1,18 @@
+{
+	"name": "Home",
+	"id": "root",
+	"children": [
+		{
+			"name": "Hall Way",
+			"id": "hall_home_1"
+		},
+		{
+			"name": "Store Room",
+			"id": "store_room_1"
+		},
+		{
+			"name": "Kitchen",
+			"id": "kitchen_1"
+		}
+	]
+}

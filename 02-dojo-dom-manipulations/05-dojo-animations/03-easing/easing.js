@@ -1,4 +1,5 @@
 require(["dojo/_base/fx", "dojo/dom", "dojo/fx/easing", "dojo/window", "dojo/on", "dojo/domReady!"], function(baseFx, dom, easing, win, on) {
+    
     var dropButton = dom.byId("dropButton"),
         ariseSirButton = dom.byId("ariseSirButton"),
         anim8target = dom.byId("anim8target");
@@ -20,10 +21,12 @@ require(["dojo/_base/fx", "dojo/dom", "dojo/fx/easing", "dojo/window", "dojo/on"
             }
         }).play();
     });
+
     on(ariseSirButton, "click", function(evt){
         baseFx.animateProperty({
             node: anim8target,
             properties: { top: 0 }
         }).play();
     });
+
 });

@@ -1,0 +1,10 @@
+.view-content {
+    display: flex;
+}
+
+.view-content .half{
+    
+    width:48%;
+    max-width:48%;
+    margin-right:10px;
+}

@@ -1,0 +1,286 @@
+1. Download Dojo
+
+    https://download.dojotoolkit.org/release-1.16.4/dojo-release-1.16.4.zip
+
+    Download DGrid
+
+    https://github.com/SitePen/dgrid/tree/v1.2.1
+
+    Download DStore
+
+    https://github.com/SitePen/dstore
+
+
+2. Install Node JS
+
+3. Install express
+
+4. Navigate to fake-backend folder
+
+npm install cors 
+npm install body-parser
+
+5. execute command "node server" or
+
+    5.1. install nodemon via npm install -g nodemon
+
+    5.2. and run "nodemon server"
+
+6. To Run Local Server
+
+    6.1. Install a local Node JS Server
+        npm install http-server -g
+
+    6.2. Run the command "http-server" from project root folder
+
+7. DGrid/DStore Deployement Instructions
+
+    7.1. place the downloaded copy of DGrid and DStore as siblings to Dojo, Dijit and Dojox
+
+    7.2. For further instruction please refer to 
+        7.2.1. https://github.com/SitePen/dgrid/tree/v1.2.1#installation
+        7.2.2. https://dgrid.io/tutorials/1.0/hello_dgrid/
+    
+     
+Agenda
+
+Introduction to DOJO components,
+
+DOJO’s  AMD-based module architecture
+
+DOJO DOM selectors,
+
+Event handling (pl include emit and publish/ subscribe),
+
+DOM manipulations
+
+DOJO effects,
+
+AJAX with DOJO (pl include dojo/when, dojo/deferred),
+
+Widgets, Dojo Widget Lifecycle (this is very critical),
+
+Dojo MVC (pl also include Stateful, ModelRefController, dojo/sync, watch etc),
+
+Dojo Templates & Data Binding,
+
+Dojo Routing,
+
+DIJIT – DOJO toolkit’s UI framework
+
+
+Introduction to AMD tutorial
+-------------------------------------
+https://dojotoolkit.org/documentation/tutorials/1.10/modules
+
+
+Not Covered
+-----------
+
+Dojo - NodeJS Integration
+
+--------------
+
+
+Functionality	Packages/Modules	Description
+Dojo Kernel	dojo/_base/kernel	The bootstrap kernel that generates the dojo namespace
+Dojo Configuration	dojo/_base/config	Configures Dojo and loads the default platform configuration
+Module Loading	
+dojo/_base/loader
+
+dojo/require [1]
+
+The legacy and AMD module loader for Dojo
+Loader Plugins	
+dojo/domReady
+
+dojo/i18n
+
+dojo/has
+
+dojo/node
+
+dojo/text
+
+AMD Loader Plugins
+Feature Detection	
+dojo/has
+
+dojo/sniff
+
+dojo/uacss
+
+dojo/_base/sniff [1]
+
+Modules that provide cross-platform feature detection and management
+Language	dojo/_base/lang	The foundation language extensions for Dojo
+Classes	dojo/_base/declare	Dojo’s class system
+Deferreds and Promises	
+dojo/promise
+
+dojo/Deferred
+
+dojo/when
+
+dojo/_base/Deferred [1]
+
+dojo/DeferredList [1]
+
+Asynchronous process management modules
+Events, Connections	
+dojo/on
+
+dojo/_base/connect
+
+dojo/_base/event
+
+dojo/Evented
+
+dojo/behavior [1]
+
+Modules for handling events and modifying behaviors
+Aspect Oriented Programming	dojo/aspect	Providing aspect based advice to modify join points (methods)
+Requests	
+dojo/request
+
+dojo/_base/xhr [1]
+
+dojo/io/iframe [1]
+
+dojo/io/script [1]
+
+Handling of requests, the core of “AJAX” programming
+Properties	dojo/Stateful	Management of object and class properties
+Topics/Publish/Subscribe	dojo/topic	Dojo’s Topic system
+Data and Stores	
+dojo/store
+
+dojo/data [1]
+
+Packages that provide client side data handling
+Router	dojo/router	Allows mapping of hash based structures to callbacks
+Parser	dojo/parser	Allows “decorated” HTML to be converted into instantiated objects
+DOM and HTML	
+dojo/dom
+
+dojo/dom-attr
+
+dojo/dom-class
+
+dojo/dom-construct
+
+dojo/dom-form
+
+dojo/dom-geometry
+
+dojo/dom-prop
+
+dojo/dom-style
+
+dojo/html
+
+dojo/_base/html [1]
+
+Modules for manipulating and managing the DOM and HTML
+Query, NodeList and Selectors	
+dojo/query
+
+dojo/NodeList
+
+dojo/NodeList-data
+
+dojo/NodeList-dom
+
+dojo/NodeList-fx
+
+dojo/NodeList-html
+
+dojo/NodeList-traverse
+
+dojo/selector
+
+dojo/_base/query [1]
+
+dojo/_base/NodeList [1]
+
+DOM querying and objective enhancements to DOM nodes
+DOM Effects	
+dojo/_base/fx
+
+dojo/fx
+
+DOM animation effects
+Browser Window	
+dojo/window
+
+dojo/_base/window [1]
+
+Cross-browser compatible references to the window
+Document Lifecycle	
+dojo/ready
+
+dojo/domReady
+
+dojo/_base/unload
+
+Document lifecycle modules
+Browser History	
+dojo/back
+
+dojo/hash
+
+Module for managing the browsers history
+Cookies	dojo/cookie	Cookie management module
+Mouse, Touch and Keys	
+dojo/mouse
+
+dojo/touch
+
+dojo/keys
+
+User input normalisation and management
+Drag and Drop	dojo/dnd	Drag and Drop package
+Testing	
+dojo/robot
+
+dojo/robotx
+
+Modules for simulating user input
+Arrays	dojo/_base/array	Array routine enhancements
+Strings	dojo/string	String routine enhancements
+JSON	
+dojo/json
+
+dojo/_base/json [1]
+
+JSON handling modules
+Colors	
+dojo/_base/Color
+
+dojo/colors
+
+Color classes/functions
+Dates	dojo/date	Date routine enhancements
+URL and Query Strings	
+dojo/_base/url
+
+dojo/io-query
+
+URL and URL query string management
+Internationalization	
+dojo/i18n
+
+dojo/cldr
+
+dojo/number
+
+dojo/currency
+
+Modules for handling internationalization of applications
+
+Accessibility	dojo/hccss	Accessibility CSS enhancements
+Remote Procedure Calls	dojo/rpc	Ability to invoke remote procedure calls
+Miscellaneous	dojo/gears [2]
+
+
+https://dojotoolkit.org/reference-guide/1.10/dojo/index.html

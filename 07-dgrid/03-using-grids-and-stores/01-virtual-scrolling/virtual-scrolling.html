@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Hello dgrid!</title>
+    
+    <link rel="stylesheet" href="../../../lib/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="../../../lib/dojo/dgrid/css/dgrid.css">
+
+    <link rel="stylesheet" href="./virtual-scrolling.css">
+
+    <!-- load Dojo --> 
+    <script src="../../../lib/dojo/dojo/dojo.js" data-dojo-config="async: true"></script>
+    <script type="text/javascript" src="./virtual-scrolling.js"></script>
+</head>
+<body>
+
+    <div class="view-content">
+    
+        <div class="half">
+            <h2>Grid with reduced farOffRemoval</h2>
+            <p>This grid will remove rows once they are over 500 pixels away from the viewport. 
+                Notice the delays in rendering rows while scrolling both up and down.</p>
+            <div id="grid1"></div>
+        </div>
+        <div class="half">
+            <h2>Grid with increased farOffRemoval and minRowsPerPage</h2>
+            <p>This grid will never remove rows, as farOffRemoval has been set to a value higher than the total height of the results. 
+                It also has minRowsPerPage set to 50 (double the default value), which will result in more items queried (and rows rendered) at a time. 
+                Once all of the rows have been rendered, you should see no delays while scrolling.</p>
+            <div id="grid2"></div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
